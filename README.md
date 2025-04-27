@@ -1,50 +1,125 @@
-# Welcome to your Expo app 👋
+# AquaAssist
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+AquaAssist is a comprehensive mobile application designed to help fish farmers monitor and manage their aquaculture operations. The app provides tools for water parameter monitoring, disease detection, and expert guidance through an AI-powered chatbot.
 
-## Get started
+## Features
 
-1. Install dependencies
+### Core Features
+- Manual data entry for water parameters (temperature, pH, dissolved oxygen, ammonia)
+- Image-based disease recognition using TensorFlow Lite
+- Predictive analytics for disease outbreaks and harvest time
+- GPT-3.5 powered chatbot for FAQs and troubleshooting
+- SMS/low-tech alerts for critical conditions
+- Offline mode with local storage
+- Multilingual support (English, Gujarati, Swahili)
 
-   ```bash
-   npm install
-   ```
+### Key Screens
+1. **Dashboard**
+   - Summary of water parameters
+   - Alerts and warnings
+   - Quick actions for data entry and disease scanning
 
-2. Start the app
+2. **Data Entry**
+   - Form for water parameter input
+   - Photo upload for visual documentation
+   - Historical data visualization
 
-   ```bash
-    npx expo start
-   ```
+3. **Disease Scanner**
+   - Camera interface for fish disease detection
+   - Gallery upload option
+   - Detailed analysis and recommendations
 
-In the output, you'll find options to open the app in a
+4. **Chatbot**
+   - Text and voice input
+   - Expert guidance and troubleshooting
+   - Offline response capability
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+5. **Settings**
+   - Language selection
+   - SMS alert configuration
+   - Offline mode settings
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Tech Stack
 
-## Get a fresh project
+### Frontend
+- React Native (Expo)
+- TensorFlow Lite for disease detection
+- React Navigation for routing
+- AsyncStorage for local data persistence
 
-When you're ready, run:
+### Backend
+- Node.js + Express.js
+- MongoDB Atlas for data storage
+- Twilio for SMS alerts
+- Dialogflow for chatbot integration
 
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI
+- Android Studio or Xcode (for emulators)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/aquaassist.git
+cd aquaassist
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Run on your preferred platform:
+```bash
+# For iOS
+npm run ios
+# For Android
+npm run android
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Environment Setup
 
-## Join the community
+Create a `.env` file in the root directory with the following variables:
+```
+API_URL=your_api_url
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
+DIALOGFLOW_PROJECT_ID=your_dialogflow_project_id
+```
 
-Join our community of developers creating universal apps.
+## Contributing
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- TensorFlow.js team for the disease detection model
+- Expo team for the React Native framework
+- Dialogflow team for the chatbot integration
+- Twilio team for the SMS functionality
+
+## Support
+
+For support, email support@aquaassist.com or join our Slack channel.

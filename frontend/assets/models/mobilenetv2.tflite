@@ -1,0 +1,16 @@
+import tensorflow as tf
+import tensorflow_hub as hub
+
+# Download MobileNetV2 (224x224 input, 1.0 alpha)
+model_url = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/classification/4"
+model = tf.keras.Sequential([
+    hub.KerasLayer(model_url, input_shape=(224, 224, 3))
+])
+
+# Convert to TFLite
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()
+
+# Save
+with open('mobilenetv2.tflite', 'wb') as f:
+    f.write(tflite_model)
